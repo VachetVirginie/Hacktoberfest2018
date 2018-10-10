@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Le chiffre mystère</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <p>
+
+
+            <button class="btn btn-primary">Régles</button>
+        </p>
+        <p class="bg-info">Nous avons généré un nombre aléatoire entre 0 et 9, tentez de le deviner en 3 tours maximum. Pour chaque tentative,tirez sur une boîte de conserve et validez nous vous dirons si votre estimation est trop ou pas assez élevée. Faites Ctrl + F5 pour
+            rejouer.
+        </p>
+    </div>
+    <div class="toure">
+
+        <div class="form">
+
+            <div class=un>
+                <input type="checkbox" type="submit" id="button1" class="boutton" value="0" />
+                <label class="can" for="button1" data-value="0">0
+    <div class="lower"></div>
+  
+</label>
+            </div>
+            <div class="deux">
+                <input type="checkbox" id="button2" class="boutton" />
+                <label class="can" for="button2" data-value="1">1
+	<div class="lower"></div>
+</label>
+
+                <input type="checkbox" id="button3" class="boutton" />
+                <label class="can" for="button3" data-value="2">2
+	<div class="lower"></div>
+</label>
+            </div>
+            <div class="trois">
+                <input type="checkbox" id="button4" class="boutton" />
+                <label class="can" for="button4" data-value="3">3
+	<div class="lower"></div>
+</label>
+
+                <input type="checkbox" id="button5" class="boutton" />
+                <label class="can" for="button5" data-value="4">4
+	<div class="lower"></div>
+</label>
+
+                <input type="checkbox" id="button6" class="boutton" />
+                <label class="can" for="button6" data-value="5">5
+	<div class="lower"></div>
+</label>
+            </div>
+            <div class="quatre">
+                <input type="checkbox" id="button7" class="boutton" />
+                <label class="can" for="button7" data-value="6">6
+	<div class="lower"></div>
+</label>
+
+                <input type="checkbox" id="button8" class="boutton" />
+                <label class="can" for="button8" data-value="7">7
+	<div class="lower"></div>
+</label>
+
+                <input type="checkbox" id="button9" class="boutton" />
+                <label class="can" for="button9" data-value="8">8
+	<div class="lower"></div>
+</label>
+
+                <input type="checkbox" id="button0" class="boutton" />
+                <label class="can" for="button0" data-value="9">9
+	<div class="lower"></div>
+</label>
+            </div>
+        </div>
+        <div class="game-row"></div>
+    </div>
+
+
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+    <div class="regles">
+
+    </div>
+
+    <div class=jeu>
+
+
+        <div class="form"> <label for="guessField">Votre proposition : </label><input type="text" id="guessField" class="guessField"> <input type="submit" value="Valider" class="guessSubmit"> </div>
+        <div class="resultParas">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+
+    <div id="test"></div>
+
+    <script type="text/javascript" src="monscript.js"></script>
+
+</html>
+
+
+
+
+
+<script>
+    $('button').click(function() {
+        $('.bg-info').slideToggle();
+    });
+    $(document).ready(function() {
+    $(document).on('click', '.can', function(e) {
+
+    });
+});
+
+
+$(".can").click(function() {
+    var text = $(this).attr('data-value');
+    $("input#guessField").val(text);
+});
+</script>
